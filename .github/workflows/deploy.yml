@@ -68,7 +68,7 @@ jobs:
       - name: test mysql
         run: |
           ssh ${{secrets.EC2_USER}}@${{secrets.EC2_HOST}} '
-          mysql -u ${{ secrets.MYSQL_USER }} -p ${{ secrets.MYSQL_PASSWORD }} -e "SHOW DATABASES;"'
+          mysql -u ${{ secrets.MYSQL_USER }} -p${{ secrets.MYSQL_PASSWORD }} -e "SHOW DATABASES;"'
 
   test_mongo:
     runs-on: ubuntu-latest
